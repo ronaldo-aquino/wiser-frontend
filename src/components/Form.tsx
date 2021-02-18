@@ -7,7 +7,7 @@ import {
   FormLabel,
   FormInput,
   FormButton,
-  FormButtonContainer
+  FormButtonContainer,
 } from "../styles/components/Form";
 
 const Form = () => {
