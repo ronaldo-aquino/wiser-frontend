@@ -9,5 +9,7 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
   }
 `;

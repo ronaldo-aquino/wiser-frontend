@@ -1,16 +1,26 @@
-import Head from "next/head";
+import Form from "../components/Form";
+import { BgImage, Wrapper, MessageFooter, Main } from "../styles/pages/Home";
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Login App</title>
-      </Head>
-
-      <main>
-        <h1>Olá mundo</h1>
-      </main>
-    </div>
+    <Main>
+      <BgImage>
+        <Wrapper isMobile>
+          <Form />
+          <MessageFooter>
+            Esqueceu seu login ou senha? Clique{" "}
+            <span className="text-underline">aqui</span>
+          </MessageFooter>
+        </Wrapper>
+      </BgImage>
+      <Wrapper isTabletOrDesktop>
+        <Form />
+        <MessageFooter>
+          Esqueceu seu login ou senha? Clique{" "}
+          <span className="text-underline">aqui</span>
+        </MessageFooter>
+      </Wrapper>
+    </Main>
   );
 };
 
