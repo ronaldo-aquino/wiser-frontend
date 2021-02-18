@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div>
       <Head>
@@ -14,8 +14,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 style={{fontFamily: 'Montserrat'}}>Olá mundo</h1>
+        <h1 style={{ fontFamily: "Montserrat" }}>Olá mundo</h1>
       </main>
     </div>
   );
-}
+};
+
+export default Home;
