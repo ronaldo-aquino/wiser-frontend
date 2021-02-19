@@ -94,6 +94,10 @@ export const FormInput = styled.input`
   @media (min-width: 768px) {
     width: 297px;
   }
+
+  @media (min-width: 1366px) {
+    width: 256px;
+  }
 `;
 
 export const FormButtonContainer = styled.div`
@@ -103,6 +107,10 @@ export const FormButtonContainer = styled.div`
   @media (min-width: 768px) {
     margin: 0;
     width: 297px;
+  }
+
+  @media (min-width: 1366px) {
+    width: 256px;
   }
 `;
 
@@ -126,5 +134,6 @@ export const FormButton = styled.button`
     position: relative;
     margin: 0;
     width: 297px;
+    box-shadow: 0px 10px 25px #CF99DB;
   }
 `;

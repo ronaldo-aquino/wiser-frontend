@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   SectionForm,
   FormContent,
@@ -10,7 +11,16 @@ import {
   FormButtonContainer,
 } from "../styles/components/Form";
 
+interface DataUser {
+  id: number,
+  email: string,
+  password: string
+}
+
 const Form = () => {
+
+  const [dataUser, setDataUser] = useState<DataUser>()
+
   return (
     <SectionForm>
       <FormContent>

@@ -78,7 +78,7 @@ export const MessageFooter = styled.p`
     }
 
     @media (min-width: 1366px) {
-      margin-left: 150px;
+      margin-left: 133px;
   }
   }
 `;
