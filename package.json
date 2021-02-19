@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cypress": "cypress run",
+    "cypress:chrome": "cypress run -b chrome",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
-    "@types/react-redux": "^7.1.16",
-    "@types/redux-thunk": "^2.1.0",
     "axios": "^0.21.1",
+    "cypress": "^6.5.0",
     "next": "10.0.7",
     "next-images": "^1.7.0",
     "react": "17.0.1",

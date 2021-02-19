@@ -87,9 +87,9 @@ export const FormLabel = styled.label`
 `;
 
 export const FormInput = styled.input<inputError>`
-  border-color: ${props => props.borderColor};
   border-radius: 8px;
   border: 1px solid #989fdb;
+  border-color: ${props => props.borderColor};
   color: #383e71;
   font-size: 10px;
   height: 48px;

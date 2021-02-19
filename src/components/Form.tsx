@@ -75,6 +75,7 @@ const Form = ({ setVisibleModal }) => {
         <FormGroup>
           <FormLabel>E-MAIL</FormLabel>
           <FormInput
+            data-cy="input-email"
             type="email"
             placeholder="user.name@mail.com"
             name="email"
@@ -85,6 +86,7 @@ const Form = ({ setVisibleModal }) => {
           <FormMessageError>{errorMessage}</FormMessageError>
           <FormLabel>SENHA</FormLabel>
           <FormInput
+            data-cy="input-password"
             type="password"
             placeholder="*******"
             name="password"
