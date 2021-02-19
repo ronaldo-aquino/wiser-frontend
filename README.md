@@ -36,7 +36,7 @@ npm run cypress:open
 
 Para realizar o login com sucesso utilize os dados abaixo:
 ```
-email: ronaldo@ronaldo.com,
+email: ronaldo@ronaldo.com
 ```
 
 ```
