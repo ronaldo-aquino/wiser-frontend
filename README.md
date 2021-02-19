@@ -28,8 +28,17 @@ Execute a aplicação:
 npm run dev
 ```
 
-Para executar os testes utilize o comando abaixo::
+Para executar os testes utilize o comando abaixo:
 
 ```
 npm run cypress:open
+```
+
+Para realizar o login com sucesso utilize os dados abaixo:
+```
+email: ronaldo@ronaldo.com,
+```
+
+```
+password: 123456
 ```
