@@ -9,12 +9,12 @@ type isMobileOrDesktop = {
 };
 
 export const Main = styled.main`
-  height: 100vh;
   background: #130525;
+  height: 100vh;
 
   @media (min-width: 768px) {
-    display: flex;
     background: #faf5ff;
+    display: flex;
   }
 `;
 
@@ -27,17 +27,17 @@ export const BgImage = styled.div`
   @media (min-width: 768px) {
     background: linear-gradient(180deg, rgba(105, 57, 153, 0) 0%, #130525  100%),
       url(${bgTablet});
+    background-size: cover;
     height: 100vh;
     width: 327px;
-    background-size: cover;
   }
 
   @media (min-width: 1366px) {
     background: linear-gradient(180deg, rgba(105, 57, 153, 0) 0%, #130525  100%),
       url(${bgDesktop});
+    background-size: cover;
     height: 100vh;
     width: 765px;
-    background-size: cover;
   }
 `;
 
@@ -52,13 +52,13 @@ export const Wrapper = styled.div<isMobileOrDesktop>`
 `;
 
 export const MessageFooter = styled.p`
-  text-align: center;
-  width: 212px;
-  margin: 0 auto;
+  color: #fff;
   font-size: 14px;
   line-height: 20px;
+  margin: 0 auto;
+  text-align: center;
+  width: 212px;
   margin-top: 57px;
-  color: #fff;
 
   .text-underline {
     text-decoration: underline;

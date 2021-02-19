@@ -10,18 +10,18 @@ export const SectionForm = styled.section`
 `;
 
 export const FormContent = styled.form`
-  margin-top: 139px;
-  width: 311px;
+  background-color: #faf5ff;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  background-color: #faf5ff;
+  margin-top: 139px;
   padding: 24px 28px 57px 27px;
-  border-radius: 8px;
   position: relative;
+  width: 311px;
 
   @media (min-width: 768px) {
-    margin-top: calc(284px - 24px);
     margin-left: calc(80px - 27px);
+    margin-top: calc(284px - 24px);
   }
 
   @media (min-width: 1366px) {
@@ -31,15 +31,15 @@ export const FormContent = styled.form`
 `;
 
 export const FormTitle = styled.h1`
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 32px;
   color: #383e71;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
   text-align: center;
 
   @media (min-width: 768px) {
-    font-weight: normal;
     font-size: 40px;
+    font-weight: normal;
     line-height: 48px;
     text-align: left;
   }
@@ -50,12 +50,12 @@ export const FormTitle = styled.h1`
 `;
 
 export const FormDescription = styled.p`
-  margin-top: 16px;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 20px;
-  text-align: center;
   color: #989fdb;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 16px;
+  text-align: center;
 
   @media (min-width: 768px) {
     font-size: 16px;
@@ -75,11 +75,11 @@ export const FormGroup = styled.div`
 `;
 
 export const FormLabel = styled.label`
-  font-size: 10px;
   align-items: center;
   color: #383e71;
-  margin-left: 11px;
+  font-size: 10px;
   margin-bottom: 8px;
+  margin-left: 11px;
 
   &:not(:first-child) {
     margin-top: 16px;
@@ -87,14 +87,14 @@ export const FormLabel = styled.label`
 `;
 
 export const FormInput = styled.input<inputError>`
-  height: 48px;
-  border: 1px solid #989fdb;
   border-color: ${props => props.borderColor};
   border-radius: 8px;
-  padding-left: 17px;
-  outline: none;
-  font-size: 10px;
+  border: 1px solid #989fdb;
   color: #383e71;
+  font-size: 10px;
+  height: 48px;
+  outline: none;
+  padding-left: 17px;
 
   @media (min-width: 768px) {
     width: 297px;
@@ -106,17 +106,10 @@ export const FormInput = styled.input<inputError>`
 `;
 
 export const FormMessageError = styled.span`
-  font-size: 10px;
   color: #ff377f;
-
-  margin-top: 8px;
+  font-size: 10px;
   margin-left: 20px;
-
-  @media (min-width: 768px) {
-  }
-
-  @media (min-width: 1366px) {
-  }
+  margin-top: 8px;
 `;
 
 export const FormButtonContainer = styled.div`
@@ -134,25 +127,25 @@ export const FormButtonContainer = styled.div`
 `;
 
 export const FormButton = styled.button`
-  width: 168px;
-  height: 48px;
   background: linear-gradient(267.79deg, #383e71 0%, #9d25b0 99.18%);
   border-radius: 8px;
-  margin: 0 auto;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
   border: none;
-  outline: none;
-  cursor: pointer;
-  position: absolute;
   bottom: calc(0px - 24px);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  line-height: 20px;
+  margin: 0 auto;
+  outline: none;
+  position: absolute;
+  width: 168px;
 
   @media (min-width: 768px) {
-    position: relative;
-    margin: 0;
-    width: 297px;
     box-shadow: 0px 10px 25px #cf99db;
+    margin: 0;
+    position: relative;
+    width: 297px;
   }
 `;
