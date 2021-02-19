@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type inputError = {
+  borderColor?: string;
+};
+
 export const SectionForm = styled.section`
   display: flex;
   justify-content: center;
@@ -82,9 +86,10 @@ export const FormLabel = styled.label`
   }
 `;
 
-export const FormInput = styled.input`
+export const FormInput = styled.input<inputError>`
   height: 48px;
   border: 1px solid #989fdb;
+  border-color: ${props => props.borderColor};
   border-radius: 8px;
   padding-left: 17px;
   outline: none;
@@ -97,6 +102,20 @@ export const FormInput = styled.input`
 
   @media (min-width: 1366px) {
     width: 256px;
+  }
+`;
+
+export const FormMessageError = styled.span`
+  font-size: 10px;
+  color: #ff377f;
+
+  margin-top: 8px;
+  margin-left: 20px;
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1366px) {
   }
 `;
 
@@ -134,6 +153,6 @@ export const FormButton = styled.button`
     position: relative;
     margin: 0;
     width: 297px;
-    box-shadow: 0px 10px 25px #CF99DB;
+    box-shadow: 0px 10px 25px #cf99db;
   }
 `;

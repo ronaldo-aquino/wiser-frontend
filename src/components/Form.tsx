@@ -10,6 +10,7 @@ import {
   FormInput,
   FormButton,
   FormButtonContainer,
+  FormMessageError,
 } from "../styles/components/Form";
 
 interface DataUser {
@@ -23,17 +24,19 @@ interface Auth {
   password: string;
 }
 
-const Form = () => {
+const Form = ({ setVisibleModal }) => {
   const [dataUser, setDataUser] = useState<DataUser>();
   const [auth, setAuth] = useState<Auth>({
     email: "",
     password: "",
   });
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [borderColor, setBorderColor] = useState<string>("#989fdb");
 
   useEffect(() => {
     const getDataUser = async () => {
       const { data } = await api.get("/auth");
-      data.map((user) => setDataUser(user));
+      data.map((user: DataUser) => setDataUser(user));
     };
 
     getDataUser();
@@ -52,18 +55,24 @@ const Form = () => {
     const { email, password } = dataUser;
 
     if (auth.email !== email) {
-      console.log("E-mail errado");
-      console.log(email);
+      setBorderColor("#ff377f");
+      setErrorMessage("Digite um e-mail válido;");
       return;
     }
 
-    if(auth.password !== password) {
-      console.log("Password errado");
-      console.log(password);
+    if (auth.password !== password) {
+      setErrorMessage("Password errado");
       return;
     }
 
     console.log("Email certo");
+    setAuth({
+      email: "",
+      password: "",
+    });
+    setBorderColor("#989fdb")
+    setVisibleModal(true);
+    setErrorMessage("");
   };
 
   return (
@@ -84,7 +93,9 @@ const Form = () => {
             name="email"
             value={auth.email}
             onChange={(e) => handleChange(e)}
+            borderColor={borderColor}
           />
+          <FormMessageError>{errorMessage}</FormMessageError>
           <FormLabel>SENHA</FormLabel>
           <FormInput
             type="password"
