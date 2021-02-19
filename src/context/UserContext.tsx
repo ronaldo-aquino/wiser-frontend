@@ -27,12 +27,16 @@ const UserProvider: React.FC = ({ children }) => {
   const [dataUser, setDataUser] = useState<DataUser>(initialState);
 
   useEffect(() => {
-    const getDataUser = async () => {
-      const { data } = await api.get("/auth");
-      data.map((user: DataUser) => setDataUser(user));
-    };
+    try {
+      const getDataUser = async () => {
+        const { data } = await api.get("/auth");
+        data.map((user: DataUser) => setDataUser(user));
+      };
 
-    getDataUser();
+      getDataUser();
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (
