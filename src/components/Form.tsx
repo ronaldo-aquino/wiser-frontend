@@ -1,4 +1,5 @@
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useContext, useEffect, useState } from "react";
+import { UserContext } from "../context/UserContext";
 import api from "../pages/api";
 import {
   SectionForm,
@@ -13,34 +14,20 @@ import {
   FormMessageError,
 } from "../styles/components/Form";
 
-interface DataUser {
-  id: number;
-  email: string;
-  password: string;
-}
-
 interface Auth {
   email: string;
   password: string;
 }
 
 const Form = ({ setVisibleModal }) => {
-  const [dataUser, setDataUser] = useState<DataUser>();
+  const { dataUser } = useContext(UserContext);
+
   const [auth, setAuth] = useState<Auth>({
     email: "",
     password: "",
   });
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [borderColor, setBorderColor] = useState<string>("#989fdb");
-
-  useEffect(() => {
-    const getDataUser = async () => {
-      const { data } = await api.get("/auth");
-      data.map((user: DataUser) => setDataUser(user));
-    };
-
-    getDataUser();
-  }, []);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -70,7 +57,7 @@ const Form = ({ setVisibleModal }) => {
       email: "",
       password: "",
     });
-    setBorderColor("#989fdb")
+    setBorderColor("#989fdb");
     setVisibleModal(true);
     setErrorMessage("");
   };
