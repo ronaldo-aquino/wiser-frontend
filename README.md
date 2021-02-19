@@ -28,7 +28,7 @@ Execute a aplicação:
 npm run dev
 ```
 
-Para executar os tentes utilize p comando abaixo:
+Para executar os testes utilize p comando abaixo:
 
 ```
 npm run cypress:open
