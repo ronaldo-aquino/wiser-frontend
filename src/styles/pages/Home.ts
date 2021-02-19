@@ -19,13 +19,13 @@ export const Main = styled.main`
 `;
 
 export const BgImage = styled.div`
-  background: linear-gradient(180deg, #130525 0%, rgba(105, 57, 153, 0) 100%),
+  background: linear-gradient(180deg, rgba(105, 57, 153, 0) 0%, #130525  100%),
     url(${bgMobile});
   background-size: cover;
   height: 383px;
 
   @media (min-width: 768px) {
-    background: linear-gradient(180deg, #130525 0%, rgba(105, 57, 153, 0) 100%),
+    background: linear-gradient(180deg, rgba(105, 57, 153, 0) 0%, #130525  100%),
       url(${bgTablet});
     height: 100vh;
     width: 327px;
@@ -33,7 +33,7 @@ export const BgImage = styled.div`
   }
 
   @media (min-width: 1366px) {
-    background: linear-gradient(180deg, #130525 0%, rgba(105, 57, 153, 0) 100%),
+    background: linear-gradient(180deg, rgba(105, 57, 153, 0) 0%, #130525  100%),
       url(${bgDesktop});
     height: 100vh;
     width: 765px;

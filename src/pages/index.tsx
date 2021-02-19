@@ -8,8 +8,8 @@ const Home: React.FC = () => {
         <Wrapper isMobile>
           <Form />
           <MessageFooter>
-            Esqueceu seu login ou senha? Clique{" "}
-            <span className="text-underline">aqui</span>
+          Esqueceu seu login ou senha? Clique{" "}
+          <span className="text-underline">aqui</span>
           </MessageFooter>
         </Wrapper>
       </BgImage>
