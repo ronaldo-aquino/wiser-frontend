@@ -4,6 +4,8 @@ import {
   ModalContainer,
   ModalContent,
   ModalButtonClose,
+  ModalTitle,
+  ModalEmail
 } from "../styles/components/Modal";
 
 const Modal = ({ setVisibleModal }) => {
@@ -15,7 +17,8 @@ const Modal = ({ setVisibleModal }) => {
   return (
     <ModalContainer>
       <ModalContent>
-        <h1>Teste</h1>
+        <ModalTitle>Ok, você logou com sucesso!</ModalTitle>
+        <ModalEmail>E-mail: {dataUser.email}</ModalEmail>
         <ModalButtonClose onClick={() => closeModal()}>Fechar!</ModalButtonClose>
       </ModalContent>
     </ModalContainer>
